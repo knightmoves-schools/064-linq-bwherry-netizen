@@ -1,11 +1,10 @@
-﻿namespace knightmoves;
+namespace knightmoves;
 using static StateList;
 
 public class StateLookUp{
 
-    public List<string> LookUp(string search){
+    public object LookUp(string search){
         return STATES
-            .Where(state => state.StartsWith(search))
-            .ToList();
+            .Where(state => state.StartsWith(search));
     }
 }
