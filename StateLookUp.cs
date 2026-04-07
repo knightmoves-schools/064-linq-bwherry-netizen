@@ -3,11 +3,9 @@ using static StateList;
 
 public class StateLookUp{
 
-    public object LookUp(string search){
-        var matches = STATES
+    public List<string> LookUp(string search){
+        return STATES
             .Where(state => state.StartsWith(search))
             .ToList();
-
-        return matches;
     }
 }
